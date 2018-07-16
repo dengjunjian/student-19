@@ -53,7 +53,7 @@
                   <input type="text" name="uesr" class="form-control" id="inputPassword3" placeholder="请输入验证码">
                 </div>
                 <div class="col-sm-4">
-                  <img class="login-img" src="../img/code.PNG" alt="">
+                  <img class="login-img" src="/login/captchaImg" alt="">
                 </div>
               </div>
 
@@ -69,11 +69,18 @@
       </div>
     </div>
   </div>
-
 </body>
-
 </html>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../lib/js/jquery-1.12.4.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../lib/js/bootstrap.min.js"></script>
+
+<script>
+  $(function(){
+    $(".login-img").click(function(){
+      console.log('你点我了');
+      $(this).attr('src',$(this).attr('src')+`?${Math.radio}`);
+    })
+  })
+</script>
